@@ -28,6 +28,7 @@ jobs:
           severity: info
           details: Test runner passed!
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK_TEST_RESULTS }}
+      - run: 'echo pwd'
       - name: Upload test results
         uses: actions/upload-artifact@v2
         if: always()
